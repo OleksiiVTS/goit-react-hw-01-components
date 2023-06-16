@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import FriendList from './FriendList';
-import Profile from './Profile'
-import StatisticsList from './StatisticsList';
-import TransactionHistory from './TransactionHistory';
-import User from './path/user';
-import Data from './path/data';
-import Friends from './path/friends';
-import Transactions from './path/transactions';
+import FriendList from './FriendList/FriendList';
+import Profile from './Profile/Profile'
+import StatisticsList from './StatisticsList/StatisticsList';
+import TransactionHistory from './TransactionHistory/TransactionHistory';
+import User from 'path/user';
+import Data from 'path/data';
+import Friends from 'path/friends';
+import Transactions from 'path/transactions';
 
 const App = () => {
   return (
