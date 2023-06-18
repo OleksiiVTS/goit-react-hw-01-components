@@ -7,10 +7,11 @@ import User from 'path/user';
 import Data from 'path/data';
 import Friends from 'path/friends';
 import Transactions from 'path/transactions';
+import {ParentComponent} from './App.styled';
 
 const App = () => {
   return (
-    <div>
+    <ParentComponent>
         <Profile
           username={User.username}
           tag={User.tag}
@@ -26,7 +27,7 @@ const App = () => {
         />
         <FriendList friends = {Friends} />
         <TransactionHistory items={Transactions} />
-    </div>
+    </ParentComponent>
   );
 };
 

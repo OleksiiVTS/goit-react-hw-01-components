@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import {Text, IsOnlineDot} from './FriendList.styled'
 
 const FriendListItem = ({
     avatar,
@@ -7,9 +8,9 @@ const FriendListItem = ({
 }) => {
     return (
         <>
-        <span title={isOnline.toString()} className="status"></span>
+        <IsOnlineDot title={isOnline.toString()}></IsOnlineDot>
         <img className="avatar" src={avatar} alt={name} width="48" />
-        <p className="name">{name}</p>
+        <Text>{name}</Text>
         </>
     )
 }

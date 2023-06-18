@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import {Text, Percent} from './StatisticsList.styled';
 
 const Statistics = ({
     label,
@@ -6,8 +7,8 @@ const Statistics = ({
 }) => {
     return (
     <> 
-        <span className="label">{label}</span>
-        <span className="percentage">{percentage}%</span>
+        <Text>{label}</Text>
+        <Percent>{percentage}%</Percent>
     </>
     )        
 }
