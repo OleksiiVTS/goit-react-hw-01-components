@@ -31,7 +31,7 @@ export const Cell = styled.th`
 
 export const Line = styled.tr`
     background-color: white;
-    &:nth-child(2n) {
+    &:nth-of-type(2n) {
         background-color: #c7c4c4;
       }
 `;
