@@ -4,7 +4,7 @@ import { Text, IsOnlineDot } from './FriendList.styled';
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <>
-      <IsOnlineDot title={isOnline.toString()}></IsOnlineDot>
+      <IsOnlineDot marker={isOnline}></IsOnlineDot>
       <img className="avatar" src={avatar} alt={name} width="48" />
       <Text>{name}</Text>
     </>

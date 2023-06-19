@@ -1,9 +1,5 @@
 import styled from '@emotion/styled';
 
-const isOnline = props => {
-  return props.title === 'true' ? 'green' : 'red';
-};
-
 export const FriendListUl = styled.ul`
   margin-right: auto;
   margin-left: auto;
@@ -39,5 +35,5 @@ export const IsOnlineDot = styled.span`
   height: 10px;
   margin-right: 5px;
   border-radius: 50%;
-  background-color: ${isOnline};
+  background-color: ${p => (p.marker ? 'green' : 'red')};
 `;
