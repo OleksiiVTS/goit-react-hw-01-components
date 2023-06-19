@@ -1,38 +1,31 @@
-import PropTypes from 'prop-types';
 import FriendList from '../FriendList/FriendList';
-import Profile from '../Profile/Profile'
+import Profile from '../Profile/Profile';
 import StatisticsList from '../StatisticsList/StatisticsList';
 import TransactionHistory from '../TransactionHistory/TransactionHistory';
-import User from 'path/user';
-import Data from 'path/data';
-import Friends from 'path/friends';
-import Transactions from 'path/transactions';
-import {ParentComponent} from './App.styled';
+import user from 'path/user';
+import data from 'path/data';
+import friends from 'path/friends';
+import transactions from 'path/transactions';
+import { ParentComponent } from './App.styled';
 
 const App = () => {
   return (
     <ParentComponent>
-        <Profile
-          username={User.username}
-          tag={User.tag}
-          location={User.location}
-          avatar={User.avatar}
-          followers={User.stats.followers}
-          views={User.stats.views}
-          likes={User.stats.likes}
-        />
-        <StatisticsList 
-          title="Upload stats"
-          datas = {Data}
-        />
-        <FriendList friends = {Friends} />
-        <TransactionHistory items={Transactions} />
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+        // followers={user.stats.followers}
+        // views={user.stats.views}
+        // likes={user.stats.likes}
+      />
+      <StatisticsList title="Upload stats" datas={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </ParentComponent>
   );
-};
-
-App.propTypes = {
-  datas: PropTypes.arrayOf(PropTypes.node)
 };
 
 export default App;
